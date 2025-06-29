@@ -55,9 +55,15 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on https://inv-hbd-me.vercel.app/:${PORT}`);
-  console.log(`📱 Frontend: https://inv-hbd-me.vercel.app/:${PORT}`);
-  console.log(`🔌 API: https://inv-hbd-me.vercel.app/:${PORT}/api`);
-}); 
+// Untuk platform selain Vercel (Railway, Render, dsb)
+if (process.env.NODE_ENV !== 'vercel') {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`📱 Frontend: http://localhost:${PORT}`);
+    console.log(`🔌 API: http://localhost:${PORT}/api`);
+  });
+}
+
+// Untuk Vercel, export app sebagai handler
+module.exports = app;
