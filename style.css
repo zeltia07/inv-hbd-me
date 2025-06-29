@@ -628,8 +628,9 @@ body {
 .wish-item .wish-name {
     color: #b84d8a;
     font-weight: bold;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Poppins', sans-serif !important;
     font-size: 1.1em;
+    font-style: normal;
 }
 .wish-item .wish-status-hadir {
     color: #43b36a;
