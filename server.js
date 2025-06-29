@@ -57,7 +57,7 @@ app.get('*', (req, res) => {
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📱 Frontend: http://localhost:${PORT}`);
-  console.log(`🔌 API: http://localhost:${PORT}/api`);
+  console.log(`🚀 Server running on https://inv-hbd-me.vercel.app/:${PORT}`);
+  console.log(`📱 Frontend: https://inv-hbd-me.vercel.app/:${PORT}`);
+  console.log(`🔌 API: https://inv-hbd-me.vercel.app/:${PORT}/api`);
 }); 
